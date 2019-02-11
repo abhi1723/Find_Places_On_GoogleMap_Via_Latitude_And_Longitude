@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         CameraPosition cameraPosition=CameraPosition.builder().target(place).zoom(17).bearing(112.5f).build();
         map=googleMap;
         map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-        map.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+        map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),5000,null);
 
     }
 }
